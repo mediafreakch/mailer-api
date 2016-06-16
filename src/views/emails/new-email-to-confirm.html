@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ricardo.ch Customer Messages -->
+    <!-- BASE TEMPLATE -->
+    <!-- V2.0 - 13.04.2016 -->
+    <title>ricardo.ch</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+
+        /* FONTS */
+        @media screen {
+            @font-face {
+                font-family: 'MetaOT';
+                src: url('https://pics.ricardostatic.ch/assets/MetaWeb-Book.7400d0f8.eot') format('embedded-opentype'),
+                url('https://pics.ricardostatic.ch/assets/MetaWeb-Book.80e4c456.woff') format('woff'),
+                url('https://pics.ricardostatic.ch/assets/MetaWeb-Book.e0d72ff7.ttf')  format('truetype');
+            }
+            @font-face {
+                font-family: 'MetaOT';
+                src: url('https://pics.ricardostatic.ch/assets/MetaWeb-Bold.e8751075.eot') format('embedded-opentype'),
+                url('https://pics.ricardostatic.ch/assets/MetaWeb-Bold.eabf37b3.woff') format('woff'),
+                url('https://pics.ricardostatic.ch/assets/MetaWeb-Bold.30c37ea3.ttf')  format('truetype');
+                font-weight: bold;
+            }
+        }
+
+        body, table {
+            font-family: 'MetaOT', 'Helvetica', 'Arial', sans-serif;
+        }
+        a {
+            font-family: 'MetaOT', 'Helvetica', 'Arial', sans-serif;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+        table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+        img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+        /* RESET STYLES */
+        img{border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none;}
+        table{border-collapse: collapse !important;}
+        body{height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important;}
+
+        /* APPLE BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        .appleLinks a, .appleLinks a:active, .appleLinks a:visited {
+            color:#333333 !important;
+            text-decoration: none !important;
+            font-weight: normal;
+        }
+        .appleLinksWhite a, .appleLinksWhite a:active, .appleLinksWhite a:visited {
+            color:#ffffff !important;
+            text-decoration: none !important;
+            font-weight: normal;
+        }
+
+        .userContent img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* MOBILE STYLES */
+        @media screen and (max-width: 605px) {
+
+            /* ALLOWS FOR FLUID TABLES */
+            .wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            /* ADJUSTS LAYOUT OF LOGO IMAGE */
+            .logo img {
+                margin: 0 auto !important;
+            }
+
+            /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .img-max {
+                max-width: 100% !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .article-img-small {
+                max-width: 100px !important;
+                width: 100px !important;
+                height: 100px !important;
+            }
+
+            .article-img-xsmall {
+                max-width: 70px !important;
+                width: 70px !important;
+                height: 70px !important;
+            }
+
+            .article-imgcontainer-small {
+                max-width: 100px !important;
+                width: 100px !important;
+            }
+
+            .article-imgcontainer-xsmall {
+                max-width: 70px !important;
+                width: 70px !important;
+            }
+
+            /* FULL-WIDTH TABLES */
+            .responsive-table {
+                width: 100% !important;
+            }
+
+            /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+            .padding {
+                padding: 10px 5% 15px 5% !important;
+            }
+
+            .padding-meta {
+                padding: 30px 5% 0px 5% !important;
+                text-align: center;
+            }
+
+            .padding-header-main {
+                padding: 10px 15px 10px 15px !important;
+                text-align: center;
+            }
+
+            .padding-header-meta {
+                padding: 10px 15px 10px 15px !important;
+                text-align: left;
+            }
+
+            .helper-footer-rules {
+                padding: 0 15px 0 15px !important;
+                text-align: left;
+            }
+
+            .no-padding {
+                padding: 0 !important;
+            }
+
+            .section-padding {
+                padding: 0 !important;
+            }
+
+            /* ADJUST BUTTONS ON MOBILE */
+            .mobile-button-section {
+                padding: 0 15px 0 15px !important;
+            }
+            .mobile-button-container {
+                margin: 0 auto;
+                width: 100% !important;
+            }
+
+            .mobile-button {
+                border: 0 !important;
+                font-size: 16px !important;
+                display: block !important;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .mobile-article-price {
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+
+            .table-cell-value {
+                padding: 0 15px 10px 15px !important;
+            }
+
+            .table-cell-value:last-child {
+                padding: 0 15px 0 15px !important;
+            }
+
+            .table-cell-key {
+                padding: 0 15px !important;
+            }
+
+        }
+
+        /* ANDROID CENTER FIX */
+        div[style*="margin: 16px 0;"] { margin: 0 !important; }
+    </style>
+
+    <!--[if mso]>
+
+    <style>
+        h1, h4, strong, a {
+            font-weight: bold !important;
+        }
+
+        .mobile-button {
+            border: 1px solid #21A9E3;
+        }
+    </style>
+
+    <![endif]-->
+
+    <!--[if lt mso 12]>
+    <style>
+        .break {
+            word-break: break-all;
+        }
+    </style>
+    <![endif]-->
+    <!--[if gte mso 12]>
+    <style>
+        .user-content {
+            word-break: break-all;
+        }
+    </style>
+    <![endif]-->
+
+</head>
+  <body style="margin: 0 !important; padding: 0 !important;">
+    <!-- TEMPLATE-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!-- HEADER-->
+<!-- HEADER > MAIN-->
+<tr>
+  <td bgcolor="#FFFFFF" align="center">
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellspacing="0" cellpadding="0" width="580">
+    <tr>
+    <td align="center" valign="top" width="580">
+    <![endif]-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px;" class="wrapper">
+      <tr>
+        <td align="left" valign="top" style="padding: 45px 15px 15px 15px; border-bottom: 5px solid #F5971E" class="logo padding-header-main"><a href="https://www.ricardo.ch/?utm_source=updateemail_de&utm_medium=email&utm_campaign=rtm_core&utm_content=header_logo" target="_blank"><img alt="Logo" src="https://pics.ricardostatic.ch/assets/logo-and-claim-lg-de.3ecfe59f.png" width="185" height="50" style="display: block; font-family: MetaOT, Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px;" border="0"/></a></td>
+      </tr>
+    </table><!--[if (gte mso 9)|(IE)]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+  </td>
+</tr>
+<!-- END HEADER > MAIN-->
+<!-- END HEADER-->
+      <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 15px 0 15px 0;" class="section-padding">
+          <!--[if (gte mso 9)|(IE)]>
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="580">
+          <tr>
+          <td align="center" valign="top" width="580">
+          <![endif]-->
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px;" class="responsive-table">
+            <!-- CONTENT-->
+<!-- HEADLINE-->
+<tr>
+  <td style="padding: 15px 15px 15px 15px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <!-- ICON-->
+        <td align="center"><img src="http://news.ricardo.ch/custloads/280489996/md_677482.png" width="48" height="48" border="0" alt="Headline Icon" style="display: block; color: #666666;  font-family: MetaOT, Helvetica, arial, sans-serif; font-size: 16px;"/></td>
+      </tr>
+      <tr>
+        <td>
+          <!-- COPY-->
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center" style="font-size: 24px; line-height:35px; font-family: MetaOT, Helvetica, Arial, sans-serif; font-weight: bold; color: #333333; padding: 15px 0 15px 0;">
+                <h1 style="font-size: 24px; line-height: 35px; font-family: MetaOT, Helvetica, Arial, sans-serif; font-weight: bold; color: #333333; padding: 0 !important; margin: 0 !important;">Confirm your new E-Mail</h1>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- END HEADLINE-->
+<!-- TEXTBOX -->
+<tr>
+  <td style="padding: 0 0 15px 0;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding: 0; border-left: 4px solid transparent" bgcolor="transparent">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="left" style="padding: 15px 15px 0 11px; font-size: 16px; line-height: 25px; font-family: MetaOT, Helvetica, Arial, sans-serif; color: #333333;">
+<p style="font-size: 16px; line-height: 25px; font-family: MetaOT, Helvetica, Arial, sans-serif; color: #333333; Margin: 0 0 15px 0;">You are only one step away from being able to use your new e-mail address.<br/> <a href="http://www.ricardo.ch" target="_blank" style="color: #21A9E3; text-decoration: none;">Confirm your e-mail address now</a></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- END TEXTBOX-->
+            <!-- END CONTENT-->
+          </table><!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+        </td>
+      </tr>
+      <!-- FOOTER-->
+<!-- FOOTER > MAIN-->
+<tr>
+  <td bgcolor="#FFFFFF" align="center">
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellspacing="0" cellpadding="0" width="580">
+    <tr>
+    <td align="center" valign="top" width="580">
+    <![endif]-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px;" class="wrapper">
+      <tr>
+        <td style="padding: 0 0 15px 0;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="padding: 15px 0 30px 0; border-top: 1px solid #f2f2f2">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" valign="middle" style="padding: 0 15px 15px 15px; font-size: 12px; line-height: 18px; font-family: MetaOT, Helvetica, Arial, sans-serif; color:#333333;"><strong style="font-size: 12px; font-family: MetaOT, Helvetica, Arial, sans-serif; font-weight: bold; color: #333333;"><span style="font-size: 12px; font-family: MetaOT, Helvetica, Arial, sans-serif; font-weight: bold; color: #333333;" class="appleLinks">ricardo.ch</span> AG</strong><br/>General-Guisan-Strasse 8 | CH-6301 Zug
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" style="padding: 0 15px; font-size: 12px; line-height: 18px; font-family: MetaOT, Helvetica, Arial, sans-serif; color:#333333;"><a href="https://www.ricardo.ch/hilfe/de-ch/unternehmen/agbreglemente.aspx?utm_source=updateemail_de&utm_medium=email&utm_campaign=rtm_core&utm_content=footer_agb" target="_blank" style="color: #21A9E3; text-decoration: none;">AGB & Reglemente</a></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table><!--[if (gte mso 9)|(IE)]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+  </td>
+</tr>
+<!-- END FOOTER > MAIN-->
+<!-- FOOTER > META-->
+<tr>
+  <td bgcolor="#F7941D" align="center">
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellspacing="0" cellpadding="0" width="580">
+    <tr>
+    <td align="center" valign="top" width="580">
+    <![endif]-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px;" class="wrapper">
+      <tr>
+        <td align="left" valign="top" style="padding: 15px 15px 15px 15px; font-size: 12px; line-height: 18px; font-family: MetaOT, Helvetica, Arial, sans-serif; color:#FFFFFF;">Copyright © 2016 by&nbsp;<span style="font-size: 12px; line-height: 18px; font-family: MetaOT, Helvetica, Arial, sans-serif; color:#FFFFFF;" class="appleLinksWhite">ricardo.ch</span> | alle Rechte vorbehalten</td>
+      </tr>
+    </table><!--[if (gte mso 9)|(IE)]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+  </td>
+</tr>
+<!-- END FOOTER > META-->
+      <!-- END FOOTER-->
+    </table>
+  </body>
+</html>
