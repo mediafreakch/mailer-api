@@ -9,6 +9,13 @@ var smtpOptions = require('./src/config/smtpOptions');
 
 // register bodyparser to process request
 app.use( bodyParser.json() );
+// apply headers to every response
+app.use( function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'accept, content-type');
+  next();
+});
 
 // configure smtp
 var smtp = nodemailer.createTransport(smtpOptions);
@@ -40,7 +47,7 @@ app.post('/users/:id/email', function(req, res) {
 });
 
 app.post('/users/:id/email/verify', function(req, res) {
-  // Request: { data: { token: '' } }
+  // Request: { data: { token: 123 } }
   // Response: { status: 'success', message: 'E-Mail sucessfully updated', data: { email: 'foo@bar.com' } }
 
   if (req.body.data.token) {
